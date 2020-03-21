@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ae86931-7745-43b1-b3f9-67394a7613d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/user/tests/UserGetRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user/tests/UserGetRequestTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +50,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserGetRequestTest">
-    <configuration name="UserGetRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserGetRequestTest.getUsersPage">
+    <configuration name="UserGetRequestTest.getAllUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -59,28 +61,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
       <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserGetRequestTest.getAllUsersInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="user.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="user.tests" />
-      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="METHOD_NAME" value="getAllUsersInformation" />
+      <option name="METHOD_NAME" value="getAllUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserGetRequestTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserGetRequestTest.getSingleUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -90,14 +77,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
       <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="METHOD_NAME" value="getSingleUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserGetRequestTest.getAllUsersInformation" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserGetRequestTest.getSingleUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -107,20 +93,51 @@
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
       <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="METHOD_NAME" value="getAllUsersInformation" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <option name="METHOD_NAME" value="getSingleUserName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserGetRequestTest.getSingleYearForUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="user.tests" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
+      <option name="METHOD_NAME" value="getSingleYearForUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserGetRequestTest.getUsersPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="user.tests" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
+      <option name="METHOD_NAME" value="getUsersPage" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserGetRequestTest" />
-        <item itemvalue="JUnit.UserGetRequestTest.getAllUsersInformation" />
-        <item itemvalue="TestNG.UserGetRequestTest" />
-        <item itemvalue="TestNG.UserGetRequestTest.getAllUsersInformation" />
+        <item itemvalue="JUnit.UserGetRequestTest.getUsersPage" />
+        <item itemvalue="JUnit.UserGetRequestTest.getSingleYearForUser" />
+        <item itemvalue="JUnit.UserGetRequestTest.getAllUserName" />
+        <item itemvalue="JUnit.UserGetRequestTest.getSingleUserName" />
+        <item itemvalue="JUnit.UserGetRequestTest.getSingleUser" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +159,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
