@@ -1,33 +1,104 @@
 package user.tests;
 
 
+import base.TestBase;
 import io.qameta.allure.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.List;
+
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
 
 @Epic("All tests for User Get Request")
 @Feature("User Test Feature")
 @DisplayName("User get request")
 
-public class UserGetRequestTest {
+public class UserGetRequestTest extends TestBase {
     @Link("https://www.youtube.com/channel/UCdUaAKTLJrPZFStzEJnpQAg")
     @DisplayName("All user list")
     @Story("All of user")
     @Description("This request includes all of user")
     @Test
-    public void getAllUsersInformation(){
-       Response response= given()
+    public void getAllUsersInformation() {
+        Response response = given()
                 .when()
-                .get("https://reqres.in/api/user");
+                .get("/user");
         System.out.println(response.body().prettyPrint());
         given()
                 .when()
-                .get("https://reqres.in/api/user")
+                .get("/user")
                 .then()
                 .statusCode(200);
+    }
+
+    @DisplayName("Get All userName")
+    @Story("List of UserName")
+    @Description("This request includes userNames")
+    @Test
+    public void getAllUserName() {
+        List names = given()
+                .when()
+                .get("/user")
+                .then()
+                .extract().path("data.name");
+        System.out.println("The user name are " + names);
+    }
+
+    @DisplayName("user page limit")
+    @Story("user Page")
+    @Description("This request includes page 2")
+    @Test
+    public void getUsersPage() {
+        Response response = given()
+                .param("page", 2)
+                .log()
+                .params()
+                .when()
+                .get("/user");
+        System.out.println(response.body().prettyPrint());
+    }
+
+    @DisplayName("Single User Validate of year")
+    @Story("Get Request for Single User")
+    @Description("This request includes user :2")
+    @Test
+    public void getSingleUser() {
+        given()
+                .when()
+                .get("/user/2")
+                .then()
+                .body("data.year", equalTo(2001));
+    }
+
+    @DisplayName("Get first user's year")
+    @Story("Extract first user's year")
+    @Description("This request extract first user's year")
+    @Test
+    public void getSingleYearForUser() {
+        int year = given()
+                .when()
+                .get("/user")
+                .then()
+                .extract().path("data[0].year");
+        System.out.println("First user's year is: " + year);
+    }
+
+    @DisplayName("Extract Single User name for Id:2")
+    @Story("Get Single UserName")
+    @Description("This request includes userName Id :2")
+    @Test
+    public void getSingleUserName() {
+        String name = given()
+                .when()
+                .get("/user/2")
+                .then()
+                .extract().path("data.name");
+        System.out.println("The user name is " + name);
     }
 }
