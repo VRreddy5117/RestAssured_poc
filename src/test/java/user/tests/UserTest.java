@@ -1,25 +1,24 @@
 package user.tests;
 
 
-import base.TestBase;
+import io.restassured.http.ContentType;
+import user.base.TestBase;
 import io.qameta.allure.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
+import user.model.User;
 
-import java.util.HashMap;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+@Epic("All tests for User")
+@DisplayName("User request for get")
+@Feature("Get Request")
 
-@Epic("All tests for User Get Request")
-@Feature("User Test Feature")
-@DisplayName("User get request")
-
-public class UserGetRequestTest extends TestBase {
+public class UserTest extends TestBase {
     @Link("https://www.youtube.com/channel/UCdUaAKTLJrPZFStzEJnpQAg")
     @DisplayName("All user list")
     @Story("All of user")
@@ -64,7 +63,7 @@ public class UserGetRequestTest extends TestBase {
         System.out.println(response.body().prettyPrint());
     }
 
-    @DisplayName("Single User Validate of year")
+    @DisplayName("Year verification of single user")
     @Story("Get Request for Single User")
     @Description("This request includes user :2")
     @Test
