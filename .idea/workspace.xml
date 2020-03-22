@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ae86931-7745-43b1-b3f9-67394a7613d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/user/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/user/tests/UserPostTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/user/tests/UserGetRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user/tests/UserGetRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/user/tests/UserGetRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/user/tests/UserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="UserParameter" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -32,6 +40,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -50,8 +59,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserGetRequestTest.getUsersPage">
-    <configuration name="UserGetRequestTest.getAllUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserPostTest.createUser">
+    <configuration name="UserPostRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -60,14 +69,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
-      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="METHOD_NAME" value="getAllUserName" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserPostRequest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserPostRequest.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="user.tests" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserPostRequest" />
+      <option name="METHOD_NAME" value="createUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserGetRequestTest.getSingleUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserPostRequest.xc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -76,14 +100,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
-      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="METHOD_NAME" value="getSingleUser" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserPostRequest" />
+      <option name="METHOD_NAME" value="xc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserGetRequestTest.getSingleUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserPostTest.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -92,14 +116,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
-      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="METHOD_NAME" value="getSingleUserName" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserPostTest" />
+      <option name="METHOD_NAME" value="createUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserGetRequestTest.getSingleYearForUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.getUsersPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-application" />
       <extension name="coverage">
         <pattern>
@@ -108,23 +132,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="user.tests" />
-      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
-      <option name="METHOD_NAME" value="getSingleYearForUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserGetRequestTest.getUsersPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="user.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="user.tests" />
-      <option name="MAIN_CLASS_NAME" value="user.tests.UserGetRequestTest" />
+      <option name="MAIN_CLASS_NAME" value="user.tests.UserTest" />
       <option name="METHOD_NAME" value="getUsersPage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -133,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserGetRequestTest.getUsersPage" />
-        <item itemvalue="JUnit.UserGetRequestTest.getSingleYearForUser" />
-        <item itemvalue="JUnit.UserGetRequestTest.getAllUserName" />
-        <item itemvalue="JUnit.UserGetRequestTest.getSingleUserName" />
-        <item itemvalue="JUnit.UserGetRequestTest.getSingleUser" />
+        <item itemvalue="JUnit.UserPostTest.createUser" />
+        <item itemvalue="JUnit.UserPostRequest" />
+        <item itemvalue="JUnit.UserPostRequest.createUser" />
+        <item itemvalue="JUnit.UserPostRequest.xc" />
+        <item itemvalue="JUnit.UserTest.getUsersPage" />
       </list>
     </recent_temporary>
   </component>
