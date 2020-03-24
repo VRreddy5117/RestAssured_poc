@@ -1,13 +1,11 @@
-package user.tests;
+package com.user.tests;
 
 
-import io.restassured.http.ContentType;
-import user.base.TestBase;
+import com.user.base.TestBase;
 import io.qameta.allure.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
-import user.model.User;
 
 import java.util.List;
 
@@ -18,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 @DisplayName("User request for get")
 @Feature("Get Request")
 
-public class UserTest extends TestBase {
+public class UserGetTest extends TestBase {
     @Link("https://www.youtube.com/channel/UCdUaAKTLJrPZFStzEJnpQAg")
     @DisplayName("All user list")
     @Story("All of user")

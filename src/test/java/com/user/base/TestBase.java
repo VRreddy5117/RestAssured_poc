@@ -1,4 +1,4 @@
-package user.base;
+package com.user.base;
 
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
