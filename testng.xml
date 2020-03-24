@@ -3,8 +3,8 @@
 <suite name="Test Suite" verbose="2">
     <test name="User Tests">
         <classes>
-            <class name="user.tests.UserPostTest" />
-            <class name="user.tests.UserTest" />
+            <class name="com.user.tests.UserGetTest" />
+            <class name="com.user.tests.UserPostTest" />
         </classes>
     </test>
 </suite>
