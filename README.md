@@ -75,7 +75,7 @@ Plugin kısmına ise Junit eklenmelidir. Ben JUnit4 entegre ettim.
  
 ----------
 # Nasıl Kullanabilirim  :information_desk_person:
-![powershell](https://github.com/sevilayagil/AllureRestAssured/blob/master/powershell.png)  
+![powershell](https://github.com/sevilayagil/AllureRestAssured/blob/master/ezgif.com-video-to-gif.gif)  
 
 
 > Terminalizde önce aşağıdaki gibi maven komutunu yazın. Bu işlemden sonra raporunuz target altında allure results klasoru altında oluşacaktır.
@@ -92,7 +92,7 @@ $ allure serve C:\kullanıcıadı\proje lokasyonu \target\allure-results
 ----------
 # Raporlama  :bar_chart:
 
-![rapor](https://github.com/sevilayagil/AllureRestAssured/blob/master/allure.png)  |  ![rapor2](https://github.com/sevilayagil/AllureRestAssured/blob/master/Screenshot_1.png)   
+![rapor](https://github.com/sevilayagil/AllureRestAssured/blob/master/report.gif)  | 
 
 
 # Jenkins Plugin
