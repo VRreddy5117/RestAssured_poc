@@ -24,7 +24,7 @@ public class UserGetTest extends TestBase {
     @Test
     public void getAllUsersInformation() {
         Response response = given()
-                .when()
+                .when().log().ifValidationFails()
                 .get("/user");
         System.out.println(response.body().prettyPrint());
         given()
@@ -40,7 +40,7 @@ public class UserGetTest extends TestBase {
     @Test
     public void getAllUserName() {
         List names = given()
-                .when()
+                .when().log().ifValidationFails()
                 .get("/user")
                 .then()
                 .extract().path("data.name");
@@ -56,7 +56,7 @@ public class UserGetTest extends TestBase {
                 .param("page", 2)
                 .log()
                 .params()
-                .when()
+                .when().log().ifValidationFails()
                 .get("/user");
         System.out.println(response.body().prettyPrint());
     }
@@ -67,7 +67,7 @@ public class UserGetTest extends TestBase {
     @Test
     public void getSingleUser() {
         given()
-                .when()
+                .when().log().ifValidationFails()
                 .get("/user/2")
                 .then()
                 .body("data.year", equalTo(2001));
@@ -92,7 +92,7 @@ public class UserGetTest extends TestBase {
     @Test
     public void getSingleUserName() {
         String name = given()
-                .when()
+                .when().log().ifValidationFails()
                 .get("/user/2")
                 .then()
                 .extract().path("data.name");
