@@ -29,7 +29,7 @@ public class UserPostTest extends TestBase {
         user.setJob("Test Automation Engineer");
         String Resp = given()
                 .contentType(ContentType.JSON)
-                .when()
+                .when().log().ifValidationFails()
                 .body(user)
                 .post("/users")
                 .then().assertThat().
@@ -49,7 +49,7 @@ public class UserPostTest extends TestBase {
         user.setEmailFail("sydney@fife");
         given()
                 .contentType(ContentType.JSON)
-                .when()
+                .when().log().ifValidationFails()
                 .body(user)
                 .post("/register")
                 .then()
