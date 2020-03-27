@@ -46,10 +46,10 @@ Projede allure ve rest assured kullanmak için pom.xml'de aşağıdaki gibi rest
 ```
 ----------
 # Nasıl Kullanabilirim  :information_desk_person:
-
-> Terminalizde önce aşağıdaki gibi maven komutunu yazın. Bu işlemden sonra raporunuz target altında allure results klasoru altında oluşacaktır.
 ![powershell](https://github.com/sevilayagil/AllureRestAssured/blob/master/powershell.png)  |  
 
+
+> Terminalizde önce aşağıdaki gibi maven komutunu yazın. Bu işlemden sonra raporunuz target altında allure results klasoru altında oluşacaktır.
 
 ```
 $  mvn clean test
