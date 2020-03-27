@@ -20,7 +20,7 @@ ALLURE REST ASSURED             |
 Windows Powershell'i açın ve önce scoopu sonrasında ise allureyi sisteminize kurun
 
 ```
-$ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+$ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 $ scoop install allure
 
 ```
