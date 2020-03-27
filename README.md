@@ -50,6 +50,7 @@ Projede allure ve rest assured kullanmak için pom.xml'de aşağıdaki gibi rest
 > Terminalizde önce aşağıdaki gibi maven komutunu yazın. Bu işlemden sonra raporunuz target altında allure results klasoru altında oluşacaktır.
 ![powershell](https://github.com/sevilayagil/AllureRestAssured/blob/master/powershell.png)  |  
 
+
 ```
 $  mvn clean test
 
