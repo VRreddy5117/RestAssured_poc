@@ -44,6 +44,35 @@ Projede allure ve rest assured kullanmak için pom.xml'de aşağıdaki gibi rest
             <version>2.9</version>
         </dependency>
 ```
+Plugin kısmına ise Junit eklenmelidir. Ben JUnit4 entegre ettim.
+```xml
+ <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20</version>
+                <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                        </property>
+                    </properties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+```
+
+ 
 ----------
 # Nasıl Kullanabilirim  :information_desk_person:
 ![powershell](https://github.com/sevilayagil/AllureRestAssured/blob/master/powershell.png)  
