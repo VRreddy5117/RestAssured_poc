@@ -6,6 +6,7 @@ ALLURE REST ASSURED             |
 
 
 > Proje örnek bir rest servisin get ve post requestleriyle api testlerinin yazılması ve rest assured ile entegrasyonu ile oluşturulmuştur.
+- Medium Link :sunflower: :  https://medium.com/hardwareandro/allure-ile-rest-assured-entegrasyonu-7da7a5f9f624
 
 
 ----------
