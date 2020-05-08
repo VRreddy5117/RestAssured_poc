@@ -1,7 +1,7 @@
 package com.user.base;
 
 import io.restassured.RestAssured;
-import org.junit.BeforeClass;
+import org.testng.annotations.BeforeClass;
 
 public class TestBase {
     @BeforeClass

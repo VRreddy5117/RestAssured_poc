@@ -5,6 +5,7 @@
         <classes>
             <class name="com.user.tests.UserGetTest" />
             <class name="com.user.tests.UserPostTest" />
+            <class name="com.user.tests.UserDeleteTest"/>
         </classes>
     </test>
 </suite>

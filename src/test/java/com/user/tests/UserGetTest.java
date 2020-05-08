@@ -2,26 +2,19 @@ package com.user.tests;
 
 
 import com.user.base.TestBase;
-import io.qameta.allure.*;
-import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
-@Epic("All tests for User")
-@DisplayName("User request for get")
-@Feature("Get Request")
 
 public class UserGetTest extends TestBase {
-    @Link("https://www.youtube.com/channel/UCdUaAKTLJrPZFStzEJnpQAg")
-    @DisplayName("All user list")
-    @Story("All of user")
-    @Description("This request includes all of user")
-    @Test
+
+
+    @Test(description = "This request includes all of user", dependsOnGroups = {"second"}, dependsOnMethods = "getAllUserName")
     public void getAllUsersInformation() {
         Response response = given()
                 .when().log().ifValidationFails()
@@ -34,10 +27,9 @@ public class UserGetTest extends TestBase {
                 .statusCode(200);
     }
 
-    @DisplayName("Get All userName")
-    @Story("List of UserName")
-    @Description("This request includes userNames")
-    @Test
+
+
+    @Test(description ="This request includes userNames", priority = 0)
     public void getAllUserName() {
         List names = given()
                 .when().log().ifValidationFails()
@@ -47,10 +39,7 @@ public class UserGetTest extends TestBase {
         System.out.println("The user name are " + names);
     }
 
-    @DisplayName("user page limit")
-    @Story("user Page")
-    @Description("This request includes page 2")
-    @Test
+    @Test (groups = "second",description ="This request includes page 2" )
     public void getUsersPage() {
         Response response = given()
                 .param("page", 2)
@@ -61,10 +50,7 @@ public class UserGetTest extends TestBase {
         System.out.println(response.body().prettyPrint());
     }
 
-    @DisplayName("Year verification of single user")
-    @Story("Get Request for Single User")
-    @Description("This request includes user :2")
-    @Test
+    @Test(description ="This request includes user: 2")
     public void getSingleUser() {
         given()
                 .when().log().ifValidationFails()
@@ -73,10 +59,17 @@ public class UserGetTest extends TestBase {
                 .body("data.year", equalTo(2001));
     }
 
-    @DisplayName("Get first user's year")
-    @Story("Extract first user's year")
-    @Description("This request extract first user's year")
-    @Test
+    @Test(description ="This request includes user: 2",enabled = false)
+    public void getSingleUser1() {
+        given()
+                .when().log().ifValidationFails()
+                .get("/user/2")
+                .then()
+                .body("data.year", equalTo(2001));
+    }
+
+
+    @Test(description ="This request extract first user's year")
     public void getSingleYearForUser() {
         int year = given()
                 .when()
@@ -86,10 +79,8 @@ public class UserGetTest extends TestBase {
         System.out.println("First user's year is: " + year);
     }
 
-    @DisplayName("Extract Single User name for Id:2")
-    @Story("Get Single UserName")
-    @Description("This request includes userName Id :2")
-    @Test
+
+    @Test(description = "This request includes userName Id :2",priority = 4)
     public void getSingleUserName() {
         String name = given()
                 .when().log().ifValidationFails()

@@ -1,32 +1,33 @@
 package com.user.tests;
 
-import io.qameta.allure.*;
-import io.qameta.allure.junit4.DisplayName;
-import io.restassured.http.ContentType;
-import org.junit.Test;
 import com.user.base.TestBase;
 import com.user.model.User;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import jdk.nashorn.internal.parser.JSONParser;
+import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.responseSpecification;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertEquals;
+import java.io.FileReader;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
-@Epic("All tests for User")
-@DisplayName("User request for post")
-@Feature("User Post Request")
 
 public class UserPostTest extends TestBase {
-    @Link("https://medium.com/@sevilayal")
-    @DisplayName("Create User")
-    @Story("User is creating")
-    @Description("This request includes creating user")
-    @Test
+
+    @Test(description = "This request for creating user")
     public void createUser() {
+/*
+        Response postresponse = null;
+        JSONParser parser = new JSONParser();
+        try {
+
+            Object obj = parser.parse(new FileReader("src/main/resources/CreateJSON_file.json"));
+
+            JSONObject jsonObject = (JSONObject) obj;*/
         User user = new User();
-        user.setName("Sevilay");
-        user.setJob("Test Automation Engineer");
+        user.setName("venkat");
+        user.setJob("Test Engineer");
         String Resp = given()
                 .contentType(ContentType.JSON)
                 .when().log().ifValidationFails()
@@ -40,13 +41,11 @@ public class UserPostTest extends TestBase {
         System.out.println("Response is\t" + Resp);
     }
 
-    @DisplayName("Register User Unsuccessfully")
-    @Story("User is registering")
-    @Description("This request includes missing register for user")
-    @Test
+
+    @Test(description = "This request includes missing register for user")
     public void registerUnsuccessful() {
         User user = new User();
-        user.setEmailFail("sydney@fife");
+        user.setEmailFail("restApi@test.com");
         given()
                 .contentType(ContentType.JSON)
                 .when().log().ifValidationFails()

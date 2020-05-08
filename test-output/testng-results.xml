@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="9" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite" duration-ms="10391" started-at="2020-05-08T18:44:58 IST" finished-at="2020-05-08T18:45:08 IST">
+    <groups>
+      <group name="second">
+        <method signature="UserGetTest.getUsersPage()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="getUsersPage" class="com.user.tests.UserGetTest"/>
+      </group> <!-- second -->
+    </groups>
+    <test name="User Tests" duration-ms="10391" started-at="2020-05-08T18:44:58 IST" finished-at="2020-05-08T18:45:08 IST">
+      <class name="com.user.tests.UserPostTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.user.tests.UserPostTest@de3a06f]" name="init" is-config="true" duration-ms="496" started-at="2020-05-08T18:44:58 IST" finished-at="2020-05-08T18:44:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="createUser()[pri:0, instance:com.user.tests.UserPostTest@de3a06f]" name="createUser" duration-ms="2470" started-at="2020-05-08T18:44:58 IST" description="This request for creating user" finished-at="2020-05-08T18:45:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="registerUnsuccessful()[pri:0, instance:com.user.tests.UserPostTest@de3a06f]" name="registerUnsuccessful" duration-ms="909" started-at="2020-05-08T18:45:06 IST" description="This request includes missing register for user" finished-at="2020-05-08T18:45:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUnsuccessful -->
+      </class> <!-- com.user.tests.UserPostTest -->
+      <class name="com.user.tests.UserGetTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="init" is-config="true" duration-ms="0" started-at="2020-05-08T18:45:01 IST" finished-at="2020-05-08T18:45:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="getAllUserName()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="getAllUserName" duration-ms="1194" started-at="2020-05-08T18:45:01 IST" description="This request includes userNames" finished-at="2020-05-08T18:45:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUserName -->
+        <test-method status="PASS" signature="getSingleUser()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="getSingleUser" duration-ms="869" started-at="2020-05-08T18:45:02 IST" description="This request includes user: 2" finished-at="2020-05-08T18:45:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSingleUser -->
+        <test-method status="PASS" signature="getSingleYearForUser()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="getSingleYearForUser" duration-ms="889" started-at="2020-05-08T18:45:03 IST" description="This request extract first user&#039;s year" finished-at="2020-05-08T18:45:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSingleYearForUser -->
+        <test-method status="PASS" signature="getUsersPage()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="getUsersPage" duration-ms="894" started-at="2020-05-08T18:45:04 IST" description="This request includes page 2" finished-at="2020-05-08T18:45:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUsersPage -->
+        <test-method name="getAllUsersInformation" signature="getAllUsersInformation()[pri:0, instance:com.user.tests.UserGetTest@6c9f5c0d]" depends-on-groups="second" status="PASS" duration-ms="1718" finished-at="2020-05-08T18:45:06 IST" started-at="2020-05-08T18:45:04 IST" depends-on-methods="com.user.tests.UserGetTest.getAllUserName" description="This request includes all of user">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllUsersInformation -->
+        <test-method status="PASS" signature="getSingleUserName()[pri:4, instance:com.user.tests.UserGetTest@6c9f5c0d]" name="getSingleUserName" duration-ms="908" started-at="2020-05-08T18:45:07 IST" description="This request includes userName Id :2" finished-at="2020-05-08T18:45:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSingleUserName -->
+      </class> <!-- com.user.tests.UserGetTest -->
+    </test> <!-- User Tests -->
+  </suite> <!-- Test Suite -->
+</testng-results>
