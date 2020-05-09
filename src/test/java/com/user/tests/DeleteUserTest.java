@@ -1,16 +1,12 @@
 package com.user.tests;
 
-import com.user.base.TestBase;
-import io.restassured.response.Response;
+import com.user.base.baseClass;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 
-public class UserDeleteTest extends TestBase {
+public class DeleteUserTest extends baseClass {
 
     @Test(description ="This request includes user: 2")
     public void deleteSingleUser() {

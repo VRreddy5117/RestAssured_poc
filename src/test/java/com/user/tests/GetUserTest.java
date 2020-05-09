@@ -1,7 +1,7 @@
 package com.user.tests;
 
 
-import com.user.base.TestBase;
+import com.user.base.baseClass;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 
-public class UserGetTest extends TestBase {
+public class GetUserTest extends baseClass {
 
 
     @Test(description = "This request includes all of user", dependsOnGroups = {"second"}, dependsOnMethods = "getAllUserName")

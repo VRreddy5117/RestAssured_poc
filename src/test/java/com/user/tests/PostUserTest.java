@@ -1,19 +1,15 @@
 package com.user.tests;
 
-import com.user.base.TestBase;
+import com.user.base.baseClass;
 import com.user.model.User;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.testng.annotations.Test;
-
-import java.io.FileReader;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 
-public class UserPostTest extends TestBase {
+public class PostUserTest extends baseClass {
 
     @Test(description = "This request for creating user")
     public void createUser() {
